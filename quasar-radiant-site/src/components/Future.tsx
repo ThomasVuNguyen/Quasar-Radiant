@@ -8,10 +8,7 @@ export default function Future() {
         
         <div className="space-y-10 text-lg md:text-xl">
           <p className="max-w-4xl">
-            When we think about browsing the internet, we often ignore the browser itself. 
-            Instead, we think about all the things we do online—the articles we read, 
-            the emails we send, the shows we watch. The software that enables it all, 
-            the browser, is so ubiquitous that it's ignored.
+            We're building Luna through innovations on hardware, model, and inference techniques. If you have an idea to share, want to hop on a chat, drop us a grant or just want to say hi, please reach out!
           </p>
           
           <p className="max-w-4xl">

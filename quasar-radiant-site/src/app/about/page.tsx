@@ -8,7 +8,7 @@ export default function AboutPage() {
       <Header />
       
       {/* Hero Section */}
-      <div className="py-16 px-6 bg-black text-white" style={{ marginTop: '64px' }}>
+      <div className="py-16 px-6 bg-black text-white">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-7xl font-black mb-8 uppercase tracking-tight leading-none">WE MIGHT NOT MAKE IT</h1>
           

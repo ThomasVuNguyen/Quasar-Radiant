@@ -11,11 +11,6 @@ export default function Home() {
       <Header />
       <Hero />
       <BrowserCompany />
-      <div className="py-16 bg-gray-50">
-        <div className="max-w-5xl mx-auto px-6">
-          <hr className="border-gray-200" />
-        </div>
-      </div>
       <HelpBuild />
       <Footer />
     </main>

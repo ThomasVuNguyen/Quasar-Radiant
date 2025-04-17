@@ -31,8 +31,4 @@ body {
   .arc-quote-mark {
     @apply text-6xl text-slate-500 font-serif absolute;
   }
-  
-  .pt-navbar {
-    @apply mt-16; /* Use margin instead of padding */
-  }
 } 

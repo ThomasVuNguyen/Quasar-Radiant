@@ -3,10 +3,9 @@ export default function Hero() {
     <section 
       className="py-20 px-6 bg-slate-700 text-white relative w-full"
       style={{
-        backgroundImage: 'url("https://images.unsplash.com/photo-1744836239470-f1cfcbb9d691?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+        backgroundImage: 'url("/dudes/thomas-chilling-with-the-box.webp")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        marginTop: '64px',
       }}
     >
       <div className="absolute inset-0 bg-slate-900 opacity-60"></div>
@@ -35,11 +34,8 @@ export default function Hero() {
 
         <a 
           href="/progress" 
-          className="inline-flex items-center gap-2 bg-white text-purple-800 px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors"
+          className="bg-transparent text-white border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-white/20 transition-colors mt-8 inline-block"
         >
-{/*          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 6v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.1 0-2 .9-2 2zm16 14H5V9h14v11z"></path>
-          </svg>*/}
           See latest progress
         </a>
       </div>

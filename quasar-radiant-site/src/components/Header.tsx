@@ -7,7 +7,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="py-4 px-6 bg-slate-700 text-white fixed top-0 left-0 right-0 z-50 w-full">
+    <header className="py-4 px-6 bg-black text-white w-full">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
         <div className="flex items-center text-center w-full md:w-auto justify-center md:justify-start mb-4 md:mb-0">
           <Link href="/" className="font-bold text-xl font-playfair italic">
@@ -40,12 +40,12 @@ export default function Header() {
         <nav className="hidden md:block">
           <ul className="flex space-x-6">
             <li>
-              <Link href="/progress" className="text-slate-300 hover:text-white">
+              <Link href="/progress" className="text-white hover:text-white">
                 Progress
               </Link>
             </li>
             <li>
-              <Link href="/about" className="text-slate-300 hover:text-white">
+              <Link href="/about" className="text-white hover:text-white">
                 About Us
               </Link>
             </li>

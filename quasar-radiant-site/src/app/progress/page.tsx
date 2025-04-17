@@ -7,95 +7,86 @@ export default function ProgressPage() {
     <main className="min-h-screen">
       <Header />
       
-      <div className="bg-indigo-700 text-white overflow-hidden" style={{ marginTop: '64px' }}>
+      <div className="bg-[#0c4fff] text-white overflow-hidden">
         <div className="relative">
           {/* Main content begins immediately after header */}
           <div className="grid grid-cols-1 lg:grid-cols-2 py-16 px-6">
             <div className="max-w-2xl mx-auto lg:mx-0 lg:ml-auto px-6 lg:pr-16">
-              <h1 className="text-2xl md:text-3xl uppercase font-bold mb-6">
-                A NEW FRONTIER MODEL<br />
-                OF OPEN SOURCE AI
-              </h1>
+              {/*<h3 className="text-white font-medium text-sm uppercase tracking-wider mb-8">
+                Current Progress
+              </h3>*/}
               
-              <p className="text-lg mb-8">
-                Hermes 3 contains advanced long-term context retention and multi-turn 
-                conversation capability, complex roleplaying and internal monologue abilities, 
-                and enhanced agentic function-calling.
-              </p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-12 leading-tight">
+                CURRENT PROGRESS
+              </h2>
               
-              <div className="mb-12">
-                <h2 className="text-xl font-bold mb-4">AVAILABLE NOW</h2>
-                <ol className="space-y-2 list-decimal pl-5">
-                  <li>
-                    <Link href="#" className="text-indigo-200 hover:text-white underline">
-                      Hermes 3 Technical Report
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#" className="text-indigo-200 hover:text-white underline">
-                      The Hermes Model Collection
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#" className="text-indigo-200 hover:text-white underline">
-                      Hermes 3 Function-Calling
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#" className="text-indigo-200 hover:text-white underline">
-                      "Freedom at the Frontier: Hermes 3"
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#" className="text-indigo-200 hover:text-white underline">
-                      Compute Partner, Lambda Labs
-                    </Link>
-                  </li>
-                </ol>
-              </div>
+              <div className="space-y-6 text-lg md:text-xl opacity-90">
+                <p className="flex items-center">
+                  <svg className="w-5 h-5 mr-2 text-indigo-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z" />
+                  </svg>
+                  27 token/s on 8B parameter models
+                </p>
+                <p className="flex items-center">
+                  <svg className="w-5 h-5 mr-2 text-indigo-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z" />
+                  </svg>
+                  Consuming under 10W while inference
+                </p>
+                <p className="flex items-center">
+                  <svg className="w-5 h-5 mr-2 text-indigo-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z" />
+                  </svg>
+                  Costs under 100$
+                </p>
+                <p className="flex items-center">
+                  <svg className="w-5 h-5 mr-2 text-indigo-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z" />
+                  </svg>
+                  Everything you see in the video is run locally (voice transcription, voice to text, LLM)
+                </p>
+                <p className="font-bold text-xl mt-6">Exponential progress coming!</p>
               
-              <Link 
-                href="#" 
-                className="bg-white text-indigo-700 px-6 py-3 inline-flex items-center rounded-sm font-bold"
-              >
-                CHAT WITH HERMES
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </Link>
-              
-              <p className="mt-12 text-sm text-indigo-200 max-w-2xl">
-                Our training data aggressively encourages the model to follow the system 
-                and instruction prompts exactly and in an adaptive manner. Hermes 3 was 
-                created by fine-tuning Llama 3.1 8B, 70B and 405B, and training on a dataset 
-                of primarily synthetically generated responses.
-              </p>
-            </div>
-            
-            <div className="hidden lg:block relative">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-6xl font-bold text-white mb-2">NOUS RESEARCH PRESENTS</div>
-                  <div className="text-8xl font-bold text-white">HERMES 3</div>
+                <div className="mt-12">
+                  <Link 
+                    href="https://www.youtube.com/@thomasthemaker" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white text-[#0c4fff] px-6 py-3 rounded-lg font-medium hover:bg-indigo-100 transition-colors inline-flex items-center"
+                  >
+                    Follow along
+                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </Link>
                 </div>
               </div>
-              <img 
-                src="/hermes-visual.jpg" 
-                alt="Hermes 3 Visual" 
-                className="h-full w-full object-cover mix-blend-overlay opacity-80" 
-              />
+            </div>
+            
+            <div className="flex items-center justify-center w-full mt-8 lg:mt-0">
+              <div className="w-full h-full relative aspect-video">
+                <iframe
+                  src="https://www.youtube.com/embed/-UShck97aaw"
+                  title="Quasar Radiant Demo"
+                  className="w-full h-full rounded-lg shadow-lg"
+                  style={{ minHeight: "300px" }}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
       </div>
       
-      {/* Blog Section - Updated to match @blog.png design */}
+      {/* 
+      <!-- Blog Section - Commented out as requested -->
       <div className="py-20 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold mb-16 text-center text-black">Latest Articles</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Blog Post 1 */}
+            <!-- Blog Post 1 -->
             <div className="group">
               <Link href="#" className="block">
                 <div className="rounded-2xl overflow-hidden mb-5 aspect-[4/3]">
@@ -112,7 +103,7 @@ export default function ProgressPage() {
               </Link>
             </div>
             
-            {/* Blog Post 2 */}
+            <!-- Blog Post 2 -->
             <div className="group">
               <Link href="#" className="block">
                 <div className="rounded-2xl overflow-hidden mb-5 aspect-[4/3]">
@@ -129,7 +120,7 @@ export default function ProgressPage() {
               </Link>
             </div>
             
-            {/* Blog Post 3 */}
+            <!-- Blog Post 3 -->
             <div className="group">
               <Link href="#" className="block">
                 <div className="rounded-2xl overflow-hidden mb-5 aspect-[4/3]">
@@ -146,7 +137,7 @@ export default function ProgressPage() {
               </Link>
             </div>
             
-            {/* Blog Post 4 */}
+            <!-- Blog Post 4 -->
             <div className="group">
               <Link href="#" className="block">
                 <div className="rounded-2xl overflow-hidden mb-5 aspect-[4/3]">
@@ -163,7 +154,7 @@ export default function ProgressPage() {
               </Link>
             </div>
             
-            {/* Blog Post 5 */}
+            <!-- Blog Post 5 -->
             <div className="group">
               <Link href="#" className="block">
                 <div className="rounded-2xl overflow-hidden mb-5 aspect-[4/3]">
@@ -180,7 +171,7 @@ export default function ProgressPage() {
               </Link>
             </div>
             
-            {/* Blog Post 6 */}
+            <!-- Blog Post 6 -->
             <div className="group">
               <Link href="#" className="block">
                 <div className="rounded-2xl overflow-hidden mb-5 aspect-[4/3]">
@@ -199,6 +190,7 @@ export default function ProgressPage() {
           </div>
         </div>
       </div>
+      */}
       
       <Footer />
     </main>
