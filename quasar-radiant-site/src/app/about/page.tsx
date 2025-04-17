@@ -76,19 +76,22 @@ export default function AboutPage() {
                         className="object-cover image-hover-effect"
                         priority={index === 0}
                       />
+                      {/* New badge commented out for now
                       {episode.isNew && (
                         <div className="episode-badge">
                           <span>New!</span>
                         </div>
                       )}
+                      */}
+                      {/* Show YouTube button only if youtubeUrl exists */}
                       {episode.youtubeUrl && (
                         <Link href={episode.youtubeUrl} target="_blank" className="youtube-button">
-                          WATCH ON YOUTUBE
+                          SEE MORE
                         </Link>
                       )}
                     </div>
                   ) : (
-                    <div className="image-container aspect-video bg-gray-100 flex items-center justify-center">
+                    <div className="image-container aspect-video bg-gray-100 flex items-center justify-center rounded-xl">
                       <span className="text-xl font-medium text-gray-400">COMING SOON</span>
                     </div>
                   )}
@@ -102,7 +105,7 @@ export default function AboutPage() {
                     <div className="flex gap-10 text-sm">
                       {episode.releaseDate && (
                         <div>
-                          <span className="block text-gray-600">RELEASE DATE</span>
+                          <span className="block text-gray-600">DATE</span>
                           <span className="block">{episode.releaseDate}</span>
                         </div>
                       )}

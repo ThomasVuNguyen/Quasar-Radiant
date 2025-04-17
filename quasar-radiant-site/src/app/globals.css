@@ -41,7 +41,7 @@ body {
   }
   
   .image-container {
-    @apply overflow-hidden relative;
+    @apply overflow-hidden relative rounded-xl;
   }
   
   .episode-badge {
