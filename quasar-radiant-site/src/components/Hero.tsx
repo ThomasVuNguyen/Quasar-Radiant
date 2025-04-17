@@ -13,12 +13,12 @@ export default function Hero() {
         <h2 className="text-sm md:text-base uppercase tracking-wider mb-4">WE'RE BUILDING</h2>
         
         <div className="relative mb-8">
-          <span className="arc-quote-mark -left-4 top-0">"</span>
+          {/*<span className="arc-quote-mark left-0 top-0">"</span>*/}
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-2">
-            Fast and Affordable AI inference on the <span className="italic">edge</span><br />
+            "Fast and Affordable AI inference on the <span className="italic">edge"</span><br />
             {/*better on Arc.*/}
           </h1>
-          <span className="arc-quote-mark -right-4 bottom-0">"</span>
+          {/*<span className="arc-quote-mark right-0 bottom-0">"</span>*/}
         </div>
         
         {/* 

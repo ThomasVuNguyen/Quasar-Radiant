@@ -22,30 +22,10 @@ export default function ProgressPage() {
               </h2>
               
               <div className="space-y-6 text-lg md:text-xl opacity-90">
-                <p className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-indigo-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z" />
-                  </svg>
-                  27 token/s on 8B parameter models
-                </p>
-                <p className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-indigo-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z" />
-                  </svg>
-                  Consuming under 10W while inference
-                </p>
-                <p className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-indigo-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z" />
-                  </svg>
-                  Costs under 100$
-                </p>
-                <p className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-indigo-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z" />
-                  </svg>
-                  Everything you see in the video is run locally (voice transcription, voice to text, LLM)
-                </p>
+                <p>27 token/s on 8B parameter models</p>
+                <p>Consuming under 10W while inference</p>
+                <p>Costs under 100$</p>
+                <p>Everything you see in the video is run locally (voice transcription, voice to text, LLM)</p>
                 <p className="font-bold text-xl mt-6">Exponential progress coming!</p>
               
                 <div className="mt-12">
@@ -70,7 +50,7 @@ export default function ProgressPage() {
                   src="https://www.youtube.com/embed/-UShck97aaw"
                   title="Quasar Radiant Demo"
                   className="w-full h-full rounded-lg shadow-lg"
-                  style={{ minHeight: "300px" }}
+                  style={{ minHeight: "300px", marginBottom: "2rem" }}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
