@@ -1,28 +1,41 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import Link from "next/link";
+import episodesData from '@/data/episodes.json';
+
+// Define the Episode type
+type Episode = {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  isNew: boolean;
+  youtubeUrl: string;
+  releaseDate: string;
+  runtime: string;
+  isReleased: boolean;
+};
 
 export default function AboutPage() {
+  // Cast the imported JSON to the Episode type
+  const episodes = episodesData as Episode[];
+
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white text-black">
       <Header />
       
       {/* Hero Section */}
       <div className="py-16 px-6 bg-black text-white">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-7xl font-black mb-8 uppercase tracking-tight leading-none">WE MIGHT NOT MAKE IT</h1>
+          <h1 className="text-7xl font-black mb-8 uppercase tracking-tight leading-none">JUST A COUPLE OF GUYS DEMOCRATIZING AI ON THE EDGE</h1>
           
           <div className="max-w-4xl">
             <p className="text-xl mb-8">
-              A limited series that breaks down the top 5 reasons our company might not
-              make it to next year. (And why we think we can.) We're sharing our insights. On
-              the industry. On the company. Our playbook if you will. Because we believe the
-              future is better when more of us dream. When more of us can create. So here
-              are the things we say in private. Pull up a chair. Do with this information what
-              you will.
+              How diverse experiences, insights and world views led to the creation of the Luna.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
               <div>
                 <ol className="space-y-2 text-xl">
                   <li>1. We get beat to the punch.</li>
@@ -39,130 +52,73 @@ export default function AboutPage() {
                   <span className="text-sm font-medium">NEW YORK</span>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
       
-      {/* Episode 1 Section */}
-      <div className="py-16 border-t border-gray-200">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="col-span-1">
-              <span className="text-lg text-gray-600">1 WE GET BEAT TO THE PUNCH</span>
-            </div>
-            
-            <div className="col-span-2">
-              <h2 className="text-5xl font-black uppercase tracking-tighter mb-8">WE GET BEAT TO THE PUNCH</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="aspect-video relative bg-gray-100">
-                  {/* Placeholder for image - in production replace with actual Image component */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="relative w-full h-full">
+      {/* Episodes */}
+      <div className="py-16 text-black">
+        {episodes.map((episode, index) => {
+          const isEven = index % 2 === 1;
+          
+          return (
+            <div key={episode.id} className="max-w-6xl mx-auto px-6 mb-20 last:mb-0">
+              <div className={`flex flex-col ${isEven ? 'md:flex-row-reverse' : 'md:flex-row'} gap-10`}>
+                <div className="md:w-1/2">
+                  {episode.isReleased && episode.image ? (
+                    <div className="image-container aspect-video">
                       <Image 
-                        src="/episodes/episode1.jpg" 
-                        alt="Episode 1" 
+                        src={episode.image}
+                        alt={`Episode ${episode.id}`}
                         fill
                         sizes="(max-width: 768px) 100vw, 50vw"
-                        className="object-cover"
-                        priority
+                        className="object-cover image-hover-effect"
+                        priority={index === 0}
                       />
-                      <div className="absolute top-0 left-0 bg-blue-600 text-white p-2 rounded-full m-4">
-                        <span>New!</span>
-                      </div>
+                      {episode.isNew && (
+                        <div className="episode-badge">
+                          <span>New!</span>
+                        </div>
+                      )}
+                      {episode.youtubeUrl && (
+                        <Link href={episode.youtubeUrl} target="_blank" className="youtube-button">
+                          WATCH ON YOUTUBE
+                        </Link>
+                      )}
                     </div>
-                  </div>
-                </div>
-                
-                <div className="flex flex-col space-y-4">
-                  <div>
-                    <span className="block text-gray-600">RELEASE DATE</span>
-                    <span className="block">03 / 22 / 24</span>
-                  </div>
-                  <div>
-                    <span className="block text-gray-600">RUNTIME</span>
-                    <span className="block">8m 51s</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      {/* Episode 2 Section */}
-      <div className="py-16 border-t border-gray-200">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="col-span-1">
-              <span className="text-lg text-gray-600">2 WE JUST CAN'T BUILD IT</span>
-            </div>
-            
-            <div className="col-span-2">
-              <h2 className="text-5xl font-black uppercase tracking-tighter mb-8">WE JUST CAN'T BUILD IT</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="aspect-video relative bg-gray-100">
-                  {/* Placeholder for image - in production replace with actual Image component */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="relative w-full h-full">
-                      <Image 
-                        src="/episodes/episode2.jpg" 
-                        alt="Episode 2" 
-                        fill
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        className="object-cover"
-                      />
+                  ) : (
+                    <div className="image-container aspect-video bg-gray-100 flex items-center justify-center">
+                      <span className="text-xl font-medium text-gray-400">COMING SOON</span>
                     </div>
-                  </div>
+                  )}
                 </div>
-                
-                <div className="flex flex-col space-y-4">
-                  <div>
-                    <span className="block text-gray-600">RELEASE DATE</span>
-                    <span className="block">04 / 04 / 24</span>
-                  </div>
-                  <div>
-                    <span className="block text-gray-600">RUNTIME</span>
-                    <span className="block">6m 56s</span>
-                  </div>
+                <div className="md:w-1/2 flex flex-col justify-center">
+                  <h2 className="text-4xl font-black uppercase tracking-tighter mb-4 text-black">{episode.title}</h2>
+                  <p className="text-gray-600 mb-6">
+                    {episode.description}
+                  </p>
+                  {episode.isReleased && (
+                    <div className="flex gap-10 text-sm">
+                      {episode.releaseDate && (
+                        <div>
+                          <span className="block text-gray-600">RELEASE DATE</span>
+                          <span className="block">{episode.releaseDate}</span>
+                        </div>
+                      )}
+                      {episode.runtime && (
+                        <div>
+                          <span className="block text-gray-600">RUNTIME</span>
+                          <span className="block">{episode.runtime}</span>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      
-      {/* Coming Soon Sections */}
-      <div className="py-16 border-t border-gray-200">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="col-span-1">
-              <span className="text-lg text-gray-600">COMING SOON</span>
-            </div>
-            
-            <div className="col-span-2 space-y-12">
-              {/* Episode 3 */}
-              <div>
-                <h3 className="text-3xl font-bold mb-4">3. We ruin the internet.</h3>
-                <p className="text-gray-600">Coming soon</p>
-              </div>
-              
-              {/* Episode 4 */}
-              <div>
-                <h3 className="text-3xl font-bold mb-4">4. We listen to our members.</h3>
-                <p className="text-gray-600">Coming soon</p>
-              </div>
-              
-              {/* Episode 5 */}
-              <div>
-                <h3 className="text-3xl font-bold mb-4">5. We can't make money.</h3>
-                <p className="text-gray-600">Coming soon</p>
-              </div>
-            </div>
-          </div>
-        </div>
+          );
+        })}
       </div>
       
       <Footer />

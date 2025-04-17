@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "title": "WE GET BEAT TO THE PUNCH",
+    "description": "How we managed to accelerate AI inference on edge when all resources went to cloud-based solutions.",
+    "image": "/episodes/episode1.jpg",
+    "isNew": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "releaseDate": "03 / 22 / 24",
+    "runtime": "8m 51s",
+    "isReleased": true
+  },
+  {
+    "id": 2,
+    "title": "WE JUST CAN'T BUILD IT",
+    "description": "The hardware challenges we faced trying to build Luna and how we pushed through them.",
+    "image": "/episodes/episode2.jpg",
+    "isNew": false,
+    "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "releaseDate": "04 / 04 / 24",
+    "runtime": "6m 56s",
+    "isReleased": true
+  },
+  {
+    "id": 3,
+    "title": "WE RUIN THE INTERNET",
+    "description": "The unintended consequences of bringing powerful AI to everyone's homes.",
+    "image": "",
+    "isNew": false,
+    "youtubeUrl": "",
+    "releaseDate": "",
+    "runtime": "",
+    "isReleased": false
+  },
+  {
+    "id": 4,
+    "title": "WE LISTEN TO OUR MEMBERS",
+    "description": "How community feedback shaped Luna's development and features.",
+    "image": "",
+    "isNew": false,
+    "youtubeUrl": "",
+    "releaseDate": "",
+    "runtime": "",
+    "isReleased": false
+  },
+  {
+    "id": 5,
+    "title": "WE CAN'T MAKE MONEY",
+    "description": "Our journey to find a sustainable business model for edge AI.",
+    "image": "",
+    "isNew": false,
+    "youtubeUrl": "",
+    "releaseDate": "",
+    "runtime": "",
+    "isReleased": false
+  }
+] 

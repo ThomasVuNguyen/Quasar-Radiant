@@ -31,4 +31,30 @@ body {
   .arc-quote-mark {
     @apply text-6xl text-slate-500 font-serif absolute;
   }
+  
+  .image-hover-effect {
+    @apply transition-transform duration-300 ease-out;
+  }
+  
+  .image-hover-effect:hover {
+    transform: scale(1.05);
+  }
+  
+  .image-container {
+    @apply overflow-hidden relative;
+  }
+  
+  .episode-badge {
+    @apply absolute top-4 left-4 bg-blue-600 text-white p-2 rounded-full z-10;
+  }
+  
+  .youtube-button {
+    @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
+           bg-white text-black py-2 px-4 rounded-full font-medium
+           border-2 border-black transition-all duration-300 z-10;
+  }
+  
+  .youtube-button:hover {
+    @apply bg-black text-white;
+  }
 } 
