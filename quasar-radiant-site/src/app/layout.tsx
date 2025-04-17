@@ -17,8 +17,11 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Quasar Radiant - Luna AI Device',
+  title: 'Luna - the AI box',
   description: 'Building the world\'s fastest AI device that runs locally',
+  icons: {
+    icon: '/favicon/favicon.ico'
+  }
 };
 
 export default function RootLayout({
