@@ -9,12 +9,12 @@ export default function BrowserCompany() {
         </h3>
         
         <h2 className="text-4xl md:text-5xl font-bold mb-12 leading-tight max-w-4xl">
-          At Luna, we are giving AI to more people.
+          We are democratizing AI access through Luna, the AI box.
         </h2>
         
         <div className="space-y-10 text-lg md:text-xl opacity-90">
           <p className="max-w-4xl">
-            At Luna, we see AI as your helpful companion in both life and work. Talking with our friends in research, building, and startups showed us something important – today's AI has barriers: privacy concerns, internet requirements, and those pesky usage fees. We're here to change that!
+            We see AI as your helpful companion in both life and work. Talking with our friends in research, building, and startups showed us something important – today's AI has barriers: privacy concerns, internet requirements, and those pesky usage fees. We're here to change that!
           </p>
           
           <p className="max-w-4xl">
