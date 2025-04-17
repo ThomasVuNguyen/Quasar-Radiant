@@ -7,6 +7,19 @@
   --background-rgb: 61, 78, 99; /* Arc blue */
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
@@ -17,5 +30,9 @@ body {
 @layer components {
   .arc-quote-mark {
     @apply text-6xl text-slate-500 font-serif absolute;
+  }
+  
+  .pt-navbar {
+    @apply mt-16; /* Use margin instead of padding */
   }
 } 

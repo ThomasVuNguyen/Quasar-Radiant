@@ -7,12 +7,9 @@ import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <main className="bg-white">
+    <main className="w-full overflow-hidden">
       <Header />
-      <div className="bg-slate-700">
-        <Hero />
-        <ArcBrowser />
-      </div>
+      <Hero />
       <BrowserCompany />
       <div className="py-16 bg-gray-50">
         <div className="max-w-5xl mx-auto px-6">

@@ -7,7 +7,7 @@ export default function ProgressPage() {
     <main className="min-h-screen">
       <Header />
       
-      <div className="bg-indigo-700 text-white overflow-hidden">
+      <div className="bg-indigo-700 text-white overflow-hidden" style={{ marginTop: '64px' }}>
         <div className="relative">
           {/* Main content begins immediately after header */}
           <div className="grid grid-cols-1 lg:grid-cols-2 py-16 px-6">

@@ -1,18 +1,28 @@
 export default function Hero() {
   return (
-    <section className="py-20 px-6 bg-slate-700 text-white">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-sm md:text-base uppercase tracking-wider mb-4">ARC FOR DEVELOPERS</h2>
+    <section 
+      className="py-20 px-6 bg-slate-700 text-white relative w-full"
+      style={{
+        backgroundImage: 'url("https://images.unsplash.com/photo-1744836239470-f1cfcbb9d691?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        marginTop: '64px',
+      }}
+    >
+      <div className="absolute inset-0 bg-slate-900 opacity-60"></div>
+      <div className="max-w-4xl mx-auto text-center relative z-10">
+        <h2 className="text-sm md:text-base uppercase tracking-wider mb-4">WE'RE BUILDING</h2>
         
         <div className="relative mb-8">
           <span className="arc-quote-mark -left-4 top-0">"</span>
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-2">
-            The web just <span className="italic">feels</span><br />
-            better on Arc.
+            Fast and Affordable AI inference on the <span className="italic">edge</span><br />
+            {/*better on Arc.*/}
           </h1>
           <span className="arc-quote-mark -right-4 bottom-0">"</span>
         </div>
         
+        {/* 
         <div className="flex items-center justify-center mb-10">
           <span className="text-slate-300 flex items-center gap-2">
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -21,15 +31,16 @@ export default function Hero() {
             @fat, Creator of Bootstrap
           </span>
         </div>
+        */}
 
         <a 
-          href="#" 
+          href="/progress" 
           className="inline-flex items-center gap-2 bg-white text-purple-800 px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors"
         >
-          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+{/*          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path d="M3 6v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.1 0-2 .9-2 2zm16 14H5V9h14v11z"></path>
-          </svg>
-          Download Arc for Windows
+          </svg>*/}
+          See latest progress
         </a>
       </div>
     </section>
