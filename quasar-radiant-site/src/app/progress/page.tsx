@@ -5,11 +5,11 @@ import PushingPerformance from "@/components/PushingPerformance";
 
 export default function ProgressPage() {
   return (
-    <main className="min-h-screen">
-      <Header />
-      
-      <div className="bg-[#0c4fff] text-white overflow-hidden">
-        <div className="relative">
+    <>
+      <main className="min-h-screen">
+        <Header />
+        <div className="bg-[#0c4fff] text-white overflow-hidden">
+          <div className="relative">
           {/* Main content begins immediately after header */}
           <div className="grid grid-cols-1 lg:grid-cols-2 py-16 px-6">
             <div className="max-w-2xl mx-auto lg:mx-0 lg:ml-auto px-6 lg:pr-16">
@@ -41,6 +41,8 @@ export default function ProgressPage() {
                     </svg>
                   </Link>
                 </div>
+
+
               </div>
             </div>
             
@@ -172,10 +174,30 @@ export default function ProgressPage() {
         </div>
       </div>
       */}
-      
+      <section className="flex items-center bg-[#181818] rounded-2xl shadow-lg p-6 md:p-8 max-w-2xl mx-auto mt-16 mb-16">
+        {/* Vertical POLITICS label */}
+        <div className="flex flex-col items-center mr-6">
+          <span className="text-[#8fe6c9] tracking-widest text-xs font-semibold" style={{writingMode: 'vertical-rl', letterSpacing: '0.2em'}}>POLITICS</span>
+        </div>
+        {/* Article Content */}
+        <div className="flex-1">
+          <h3 className="text-2xl font-bold text-white mb-2">The 100 day inferno</h3>
+          <div className="flex items-center mb-4">
+            <span className="text-[#8fe6c9] font-medium mr-3">ADI ROBERTSON</span>
+            <span className="text-gray-400 text-sm">APR 28</span>
+          </div>
+        </div>
+        {/* Thumbnail Image */}
+        <div className="ml-6 flex-shrink-0">
+          <img
+            src="/images/inferno-thumbnail.png" 
+            alt="100 day inferno illustration"
+            className="w-24 h-24 rounded-xl object-cover border-2 border-[#222]"
+          />
+        </div>
+      </section>
       <PushingPerformance />
-      
       <Footer />
     </main>
-  );
-} 
+  </>);
+}
