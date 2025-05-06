@@ -2,6 +2,8 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PushingPerformance from "@/components/PushingPerformance";
+import storiesData from '@/data/stories.json';
+import Image from "next/image";
 
 export default function ProgressPage() {
   return (
@@ -22,9 +24,11 @@ export default function ProgressPage() {
               </h2>
               
               <div className="space-y-6 text-lg md:text-xl opacity-90">
-                <p>27 token/s on 8B parameter models</p>
-                <p>Consuming under 10W while inference</p>
-                <p>Costs under 100$</p>
+                <p>For 8B parameter models:</p>
+                <p>Prompt evaluation: 210 tokens/s</p>
+                <p>Token generation: 27 tokens/s</p>
+                <p>Power consumption: 5W</p>
+                <p>Cost: from 55$</p>
                 <p>Everything you see in the video is run locally (voice transcription, voice to text, LLM)</p>
                 <p className="font-bold text-xl mt-6">Exponential progress coming!</p>
               
@@ -174,28 +178,58 @@ export default function ProgressPage() {
         </div>
       </div>
       */}
-      <section className="flex items-center bg-[#181818] rounded-2xl shadow-lg p-6 md:p-8 max-w-2xl mx-auto mt-16 mb-16">
-        {/* Vertical POLITICS label */}
-        <div className="flex flex-col items-center mr-6">
-          <span className="text-[#8fe6c9] tracking-widest text-xs font-semibold" style={{writingMode: 'vertical-rl', letterSpacing: '0.2em'}}>POLITICS</span>
-        </div>
-        {/* Article Content */}
-        <div className="flex-1">
-          <h3 className="text-2xl font-bold text-white mb-2">The 100 day inferno</h3>
-          <div className="flex items-center mb-4">
-            <span className="text-[#8fe6c9] font-medium mr-3">ADI ROBERTSON</span>
-            <span className="text-gray-400 text-sm">APR 28</span>
-          </div>
-        </div>
-        {/* Thumbnail Image */}
-        <div className="ml-6 flex-shrink-0">
-          <img
-            src="/images/inferno-thumbnail.png" 
-            alt="100 day inferno illustration"
-            className="w-24 h-24 rounded-xl object-cover border-2 border-[#222]"
-          />
-        </div>
-      </section>
+
+      {/* Stories Section - styled exactly like Episodes */}
+      <div className="py-16 bg-white text-black">
+        {[...storiesData]
+          .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+          .map((story, index) => {
+          const isEven = index % 2 === 1;
+          return (
+            <div key={story.id} className="max-w-6xl mx-auto px-6 mb-20 last:mb-0">
+              <div className={`flex flex-col ${isEven ? 'md:flex-row-reverse' : 'md:flex-row'} gap-10`}>
+                <div className="md:w-1/2">
+                  {story.image ? (
+                    <div className="image-container aspect-video">
+                      <Image
+                        src={story.image}
+                        alt={`Story ${story.id}`}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover image-hover-effect"
+                        priority={index === 0}
+                      />
+                      {/* Show button if url exists */}
+                      {story.url && (
+                        <Link href={story.url} target="_blank" className="youtube-button">
+                          SEE MORE
+                        </Link>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="image-container aspect-video bg-gray-100 flex items-center justify-center rounded-xl">
+                      <span className="text-xl font-medium text-gray-400">COMING SOON</span>
+                    </div>
+                  )}
+                </div>
+                <div className="md:w-1/2 flex flex-col justify-center">
+                  <h2 className="text-4xl font-black uppercase tracking-tighter mb-4 text-black">{story.title}</h2>
+                  <p className="text-gray-600 mb-6">{story.description}</p>
+                  <div className="flex gap-10 text-sm">
+                    {story.date && (
+                      <div>
+                        <span className="block text-gray-600">DATE</span>
+                        <span className="block">{story.date}</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
       <PushingPerformance />
       <Footer />
     </main>

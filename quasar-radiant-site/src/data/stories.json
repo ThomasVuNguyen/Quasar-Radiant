@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Luna v0.0.1",
+    "description": "Running on an Orange Pi 5 Pro, we found some interesting tricks to increase speed by 25% while cutting power consumption by 50%.",
+    "image": "/stories/luna-demo1.jpg",
+    "url": "#",
+    "date": "Apr 28, 2025"
+  },
+  {
+    "id": 2,
+    "title": "Edge AI in the Real World",
+    "description": "Stories from users deploying AI models on real devices, from drones to wearables.",
+    "image": "/stories/edge-ai.jpg",
+    "url": "#",
+    "date": "Apr 15, 2025"
+  },
+  {
+    "id": 3,
+    "title": "Luna v0.3.2",
+    "description": "(Accidentally) achieving 210 tokens/s prompt evaluation speed.",
+    "image": "/stories/210tps.webp",
+    "url": "https://halved-meat-bd8.notion.site/Migrating-to-RKLLM-1-2-0-1eac100a431380f5907be1519571d9be?pvs=74",
+    "date": "Mar 5, 2025"
+  }
+]
