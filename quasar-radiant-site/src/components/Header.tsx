@@ -37,11 +37,16 @@ export default function Header() {
         </button>
         
         {/* Desktop navigation */}
-        <nav className="hidden md:block">
-          <ul className="flex space-x-6">
+        <nav className="hidden md:flex flex-1 justify-center">
+          <ul className="flex space-x-8">
             <li>
               <Link href="/progress" className="text-black hover:text-gray-600">
                 Progress
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog" className="text-black hover:text-gray-600">
+                Blog
               </Link>
             </li>
             <li>
@@ -83,6 +88,15 @@ export default function Header() {
                   onClick={() => setMenuOpen(false)}
                 >
                   Progress
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/blog" 
+                  className="text-white text-4xl font-bold hover:text-gray-200"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Blog
                 </Link>
               </li>
               <li>
