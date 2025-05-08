@@ -28,7 +28,7 @@ export default function ProgressPage() {
                 <p>Prompt evaluation: 210 tokens/s</p>
                 <p>Token generation: 27 tokens/s</p>
                 <p>Power consumption: 5W</p>
-                <p>Cost: from 55$</p>
+                <p>Hard cost: 55$</p>
                 <p>Everything you see in the video is run locally (voice transcription, voice to text, LLM)</p>
                 <p className="font-bold text-xl mt-6">Exponential progress coming!</p>
               
