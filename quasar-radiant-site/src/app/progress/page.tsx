@@ -25,7 +25,7 @@ export default function ProgressPage() {
               
               <div className="space-y-6 text-lg md:text-xl opacity-90">
                 <p>For 8B parameter models:</p>
-                <p>Prompt evaluation: 330 tokens/s</p> 
+                <p>Prompt evaluation: 380 tokens/s</p> 
                 <p>Token generation: 27 tokens/s</p>
                 <p>Power consumption: 5W</p>
                 <p>Hard cost: 55$</p>
