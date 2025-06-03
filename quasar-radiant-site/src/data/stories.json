@@ -1,5 +1,30 @@
 [
   {
+    "id":"blog3",
+    "title":"A coding agent evaluation for small language models",
+    "description":"Small models are knowledgable and capable of coding, but still lack the confidence for agent tasks.",
+    "date":"June 03, 2025",
+    "image":"/blogs/marble.webp",
+    "url":"https://halved-meat-bd8.notion.site/A-coding-agent-evaluation-for-small-language-models-207c100a431380b49e82c28de053a1f5?pvs=74"
+  },
+
+  {
+    "id": "blog1",
+    "title": "DyT: Theoretically faster but practically slower",
+    "description": "DyT was proposed as an alternative to RMS Normalization within Transformer Inference. Technically, it's 2x faster, but in practice 35% slower due to lack of SIMD support.",
+    "date": "2025-05-01",
+    "image": "/blogs/dyt.webp",
+    "url": "https://halved-meat-bd8.notion.site/DyT-for-RMS-Norm-lack-SIMD-1bbc100a431380dfb7dcd6d194f5c2fb?pvs=73"
+  },
+  {
+    "id": "blog2",
+    "title": "ReplaceME: Prune & Heal AI models for superior speed",
+    "description": "A benchmark of replaceMe, a research paper on improving pruned model accuracy.",
+    "date": "May 6, 2025",
+    "image": "/blogs/replaceme.webp",
+    "url": "https://halved-meat-bd8.notion.site/ReplaceME-1ecc100a4313803a8920c9bdd48c6b71"
+  },
+  {
     "id": 1,
     "title": "Luna v0.0.1",
     "description": "The first version of Luna, the AI box runs on an Orange Pi 5 Pro. Our findings on CPU core manipulation allowed for 25% increase in LLM inference speed while consuming 40% less power.",

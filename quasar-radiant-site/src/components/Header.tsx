@@ -45,11 +45,6 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/blog" className="text-black hover:text-gray-600">
-                Blog
-              </Link>
-            </li>
-            <li>
               <Link href="/about" className="text-black hover:text-gray-600">
                 About Us
               </Link>
@@ -88,15 +83,6 @@ export default function Header() {
                   onClick={() => setMenuOpen(false)}
                 >
                   Progress
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/blog" 
-                  className="text-white text-4xl font-bold hover:text-gray-200"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  Blog
                 </Link>
               </li>
               <li>
