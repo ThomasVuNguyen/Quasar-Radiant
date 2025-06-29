@@ -1,15 +1,17 @@
 export default function Hero() {
   return (
     <section 
-      className="py-20 px-6 bg-slate-700 text-white relative w-full"
-      style={{
-        backgroundImage: 'url("/dudes/thomas-chilling-with-the-box.webp")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
+      className="py-20 px-6 bg-slate-700 text-white relative w-full flex items-center justify-center min-h-[400px]"
+      style={{ paddingTop: 0, paddingBottom: 0 }}
     >
-      <div className="absolute inset-0 bg-slate-900 opacity-60"></div>
-      <div className="max-w-4xl mx-auto text-center relative z-10">
+<img 
+  src="/dudes/ghibli-luna.webp" 
+  alt="Luna Ghibli style" 
+  className="absolute inset-0 w-full h-full object-cover z-0" 
+  style={{ pointerEvents: 'none' }}
+/>
+      <div className="absolute inset-0 bg-slate-900 opacity-60 z-10"></div>
+      <div className="max-w-4xl mx-auto text-center relative z-20">
         <h2 className="text-sm md:text-base uppercase tracking-wider mb-4">WE'RE BUILDING</h2>
         
         <div className="relative mb-8">
